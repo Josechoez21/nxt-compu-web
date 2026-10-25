@@ -6,6 +6,7 @@
   <title>Cámaras de Seguridad — NXT COMPU</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --cyan: #26C6DA;
@@ -305,6 +306,98 @@
       font-size: 0.78rem;
     }
     .site-footer span { color: var(--cyan); font-weight: 700; }
+
+    /* ─── CORPORATE B2B THEME ─── */
+    :root{
+      --cyan:#00a8cc;
+      --cyan-dark:#0284c7;
+      --cyan-pale:#e8f7fb;
+      --dark:#0d274d;
+      --text:#10233f;
+      --muted:#526277;
+      --border:#e4eaf1;
+    }
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#f4f6f9;color:var(--text);line-height:1.6}
+    .top-bar{background:#0a192f;color:rgba(255,255,255,.82);font-size:.68rem;letter-spacing:.1em}
+    .site-header{
+      position:sticky;top:0;min-height:76px;height:76px;padding:0 max(32px,calc((100vw - 1280px)/2));
+      background:rgba(13,39,77,.98);border:0;box-shadow:0 4px 18px rgba(4,20,43,.16)
+    }
+    .site-header>a:first-child{display:flex;align-items:center;flex-shrink:0}
+    .site-header>a:first-child img{height:58px;max-height:58px!important;width:auto;filter:brightness(0) invert(1)}
+    .header-right{gap:10px}
+    .nav-links{gap:2px}
+    .nav-links a{
+      color:rgba(255,255,255,.76);font-family:'Inter',sans-serif;font-size:.82rem;
+      font-weight:500;letter-spacing:0;text-transform:none;padding:9px 14px;border-radius:5px
+    }
+    .nav-links a:hover{color:#fff;background:rgba(255,255,255,.1)}
+    .btn-volver{
+      background:#00a8cc;color:#fff;font-family:'Inter',sans-serif;font-size:.8rem;
+      font-weight:600;letter-spacing:0;text-transform:none;padding:10px 16px;border-radius:5px;
+      transition:background .25s,transform .25s,box-shadow .25s
+    }
+    .btn-volver:hover{background:#0284c7;transform:translateY(-1px);box-shadow:0 5px 18px rgba(0,168,204,.28)}
+    .btn-header-cta{
+      display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;
+      padding:10px 16px;border-radius:5px;background:#0078d4;color:#fff;
+      font-size:.8rem;font-weight:600;text-decoration:none;transition:.25s ease
+    }
+    .btn-header-cta:hover{background:#0284c7;transform:translateY(-1px);box-shadow:0 5px 18px rgba(0,120,212,.28)}
+    .catalog-layout{max-width:1200px;margin:40px auto;padding:0 20px;gap:24px}
+    .sidebar{top:96px;border-color:var(--border);border-radius:8px;box-shadow:0 4px 20px rgba(13,39,77,.05)}
+    .sidebar-title{color:#0284c7;border-bottom-color:#e5f2f7}
+    .search-box{border-color:var(--border);border-radius:5px}
+    .search-box input{font-family:'Inter',sans-serif}
+    .search-box button{background:#0284c7}
+    .brand-list li:hover{color:#0284c7}
+    .cat-label input[type="checkbox"]{accent-color:#0284c7}
+    .catalog-header h1{color:#10233f;font-size:clamp(1.25rem,2vw,1.65rem);letter-spacing:-.025em}
+    .catalog-header h1 span{color:#0284c7}
+    .product-count{color:#526277}
+    .product-grid{gap:18px}
+    .product-card{
+      position:relative;height:100%;border:1px solid #e7edf3;border-radius:8px;
+      box-shadow:0 4px 20px rgba(13,39,77,.07);
+      transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease
+    }
+    .product-card::before{
+      content:"";position:absolute;top:0;left:0;right:0;height:3px;z-index:1;
+      background:#0284c7;transform:scaleX(0);transform-origin:left;transition:transform .28s ease
+    }
+    .product-card:hover{border-color:#d5e8f1;box-shadow:0 14px 32px rgba(13,39,77,.12);transform:translateY(-5px)}
+    .product-card:hover::before{transform:scaleX(1)}
+    .product-img{background:#f4f6f9}
+    .product-body{padding:20px 18px 22px}
+    .product-brand{color:#0284c7}
+    .product-name{color:#10233f}
+    .product-price{color:#0284c7}
+    .btn-consultar{font-family:'Inter',sans-serif;border-radius:5px}
+    .site-footer{background:#0d274d}
+    .site-footer span{color:#73e3f5}
+    @media(max-width:1024px){
+      .site-header{padding:0 24px}
+      .header-right{gap:6px}
+      .nav-links a{padding:9px 10px}
+    }
+    @media(max-width:768px){
+      .site-header{height:64px;min-height:64px;padding:0 16px;flex-direction:row;gap:8px}
+      .site-header>a:first-child img{height:48px;max-height:48px!important}
+      .nav-links{display:none}
+      .header-right{justify-content:flex-end;gap:8px}
+      .btn-volver,.btn-header-cta{padding:9px 11px;font-size:.72rem}
+      .catalog-layout{margin:24px auto;padding:0 16px}
+      .sidebar{position:static}
+    }
+    @media(max-width:420px){
+      .top-bar{font-size:.58rem;letter-spacing:.04em}
+      .site-header{padding:0 12px}
+      .site-header>a:first-child img{height:42px;max-height:42px!important}
+      .btn-volver,.btn-header-cta{padding:8px;font-size:.66rem}
+      .catalog-header{align-items:flex-start;gap:8px}
+      .catalog-header h1{font-size:1.05rem}
+      .product-count{white-space:nowrap}
+    }
   </style>
 </head>
 <body>
@@ -324,6 +417,7 @@
         </ul>
       </nav>
       <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+      <a href="https://wa.me/593994702091" target="_blank" rel="noopener noreferrer" class="btn-header-cta">WhatsApp</a>
     </div>
   </header>
 

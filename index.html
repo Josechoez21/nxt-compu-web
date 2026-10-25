@@ -263,6 +263,158 @@
       .hc-content{padding:18px 20px 10px}.hc-bottom{padding:10px 20px 18px}
       .stats-grid{grid-template-columns:1fr 1fr;gap:12px}.stat-card{padding:24px 10px}.stat-number{font-size:1.8rem}
     }
+
+    /* ─── CORPORATE B2B REFRESH ─── */
+    :root{
+      --accent:#0284c7;
+      --accent-dark:#0369a1;
+      --accent-light:#67e8f9;
+      --bg-page:#fff;
+      --bg-section:#f4f6f9;
+      --bg-card:#fff;
+      --border:#e4eaf1;
+      --border-accent:rgba(0,168,204,.25);
+      --text-primary:#10233f;
+      --text-secondary:#526277;
+      --text-muted:#7d8ca1;
+      --dark-900:#0d274d;
+      --dark-800:#113264;
+      --radius-md:8px;
+      --radius-lg:8px;
+      --radius-xl:12px;
+    }
+    body{background:#fff;color:var(--text-primary)}
+    #particle-canvas{z-index:3;opacity:.34;mix-blend-mode:screen}
+    .site-header{
+      height:76px;padding:0 max(32px,calc((100vw - 1280px)/2));
+      background:rgba(13,39,77,.97);border-bottom:1px solid rgba(255,255,255,.1);
+      box-shadow:0 4px 18px rgba(4,20,43,.12)
+    }
+    .site-header.scrolled{background:rgba(13,39,77,.98);box-shadow:0 8px 24px rgba(4,20,43,.18)}
+    .header-logo img{height:58px;filter:brightness(0) invert(1)}
+    .site-header.scrolled .header-logo img{height:52px}
+    .nav-links a{color:rgba(255,255,255,.76);border-radius:5px}
+    .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.1)}
+    .btn-header-cta{background:#00a8cc;border-radius:5px;padding:10px 18px}
+    .btn-header-cta:hover{background:#0284c7;box-shadow:0 5px 18px rgba(0,168,204,.28)}
+    .hamburger span{background:#fff}
+    .mobile-nav{background:rgba(13,39,77,.98)}
+    .mobile-nav a{color:#fff}
+    .carousel-section{
+      position:relative;z-index:2;isolation:isolate;max-width:none;margin:0;
+      padding:132px max(24px,calc((100vw - 1200px)/2)) 48px;
+      background:linear-gradient(135deg,#0a192f 0%,#113264 55%,#1b498a 100%);
+      overflow:hidden
+    }
+    .carousel-section::before{
+      content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+      background:radial-gradient(ellipse at 82% 16%,rgba(0,168,204,.17),transparent 36%),
+        linear-gradient(90deg,rgba(5,19,40,.24),transparent 75%)
+    }
+    .hero-intro{
+      display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);
+      gap:56px;align-items:center;max-width:1200px;margin:0 auto 36px;
+      color:#fff
+    }
+    .hero-copy{max-width:720px}
+    .hero-eyebrow{
+      display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;
+      color:#8ceaff;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase
+    }
+    .hero-eyebrow::before{content:"";width:24px;height:2px;background:#00c2e0}
+    .hero-title{
+      max-width:720px;margin-bottom:18px;color:#fff;
+      font-size:clamp(2.4rem,5.3vw,4.35rem);font-weight:750;line-height:1.06;letter-spacing:-.055em
+    }
+    .hero-title span{color:#73e3f5;font-weight:400}
+    .hero-description{max-width:590px;color:rgba(238,246,255,.78);font-size:1.04rem;line-height:1.75}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .hero-action{
+      display:inline-flex;min-height:48px;align-items:center;justify-content:center;
+      padding:0 22px;border:1px solid transparent;border-radius:5px;
+      font-size:.88rem;font-weight:700;transition:.25s ease
+    }
+    .hero-action-primary{background:#0078d4;color:#fff}
+    .hero-action-primary:hover{background:#0284c7;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,120,212,.28)}
+    .hero-action-secondary{background:#fff;color:#10233f}
+    .hero-action-secondary:hover{background:#e9f8fc;transform:translateY(-2px)}
+    .hero-highlight{
+      padding:28px 30px;border-left:3px solid #00c2e0;
+      background:rgba(255,255,255,.07);backdrop-filter:blur(8px)
+    }
+    .hero-highlight strong{display:block;color:#fff;font-size:1.38rem;font-weight:650;line-height:1.4}
+    .hero-highlight span{display:block;margin-top:9px;color:rgba(238,246,255,.67);font-size:.85rem;line-height:1.6}
+    .carousel-wrapper{
+      max-width:1200px;margin:0 auto;border:1px solid rgba(255,255,255,.15);
+      border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.24)
+    }
+    .carousel-dots{background:rgba(10,25,47,.94)}
+    .carousel-dot{background:rgba(255,255,255,.4)}
+    .carousel-dot.active{background:#53d8ee}
+    .stats-section{max-width:1200px;padding:48px 20px}
+    .stat-card{
+      padding:28px 16px;background:#fff;border:1px solid var(--border);
+      border-radius:8px;box-shadow:0 4px 20px rgba(13,39,77,.05)
+    }
+    .stat-number,.stat-suffix{color:#0284c7}
+    .services-section{max-width:none;padding:78px max(20px,calc((100vw - 1160px)/2));background:#f4f6f9}
+    .section-header{max-width:720px;margin:0 auto 42px}
+    .section-eyebrow{color:#0284c7}
+    .section-title{color:#10233f}
+    .section-title span{color:#0284c7}
+    .services-grid{max-width:1160px;margin:0 auto;gap:20px}
+    .service-card{
+      position:relative;min-height:260px;padding:28px;background:#fff;
+      border:1px solid #e7edf3;border-radius:8px;
+      box-shadow:0 4px 20px rgba(13,39,77,.07);
+      transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease
+    }
+    .service-card::before{
+      content:"";position:absolute;top:-1px;left:0;right:0;height:3px;
+      background:#0284c7;transform:scaleX(0);transform-origin:left;transition:transform .28s ease
+    }
+    .service-card:hover{border-color:#d5e8f1;transform:translateY(-5px);box-shadow:0 14px 32px rgba(13,39,77,.12)}
+    .service-card:hover::before{transform:scaleX(1)}
+    .service-card:nth-child(3){background:#2e386b;border-color:#2e386b}
+    .service-card:nth-child(3) h3,.service-card:nth-child(3) p{color:#fff}
+    .service-card:nth-child(3) p{color:rgba(255,255,255,.77)}
+    .service-card:nth-child(3) .service-icon{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+    .service-card:nth-child(3) .service-icon svg,.service-card:nth-child(3) .service-link{color:#8ceaff;stroke:#8ceaff}
+    .service-card:nth-child(3):hover{border-color:#5968ad}
+    .brands-section{background:#fff;border-color:var(--border)}
+    .marquee-wrapper::before{background:linear-gradient(to right,#fff,transparent)}
+    .marquee-wrapper::after{background:linear-gradient(to left,#fff,transparent)}
+    .why-section,.reviews-section{max-width:1160px}
+    .why-visual{border-radius:8px;background:linear-gradient(145deg,#0d274d,#1b498a)}
+    .review-card{border-radius:8px;box-shadow:0 4px 20px rgba(13,39,77,.05)}
+    .review-card:hover{box-shadow:0 12px 28px rgba(13,39,77,.1)}
+    .cta-card{border-radius:10px;background:linear-gradient(135deg,#f1f8fc,#fff);border-color:#dceaf2}
+    .cta-card h2 span{color:#0284c7}
+    .btn-primary{border-radius:5px;background:#0078d4}
+    .btn-primary:hover{background:#0284c7}
+    .site-footer{background:#0d274d}
+    .wa-float a{box-shadow:0 5px 22px rgba(37,211,102,.32)}
+    @media(max-width:768px){
+      .site-header{padding:0 16px;height:64px}
+      .carousel-section{padding:96px 16px 32px}
+      .hero-intro{grid-template-columns:1fr;gap:24px;margin-bottom:28px}
+      .hero-title{font-size:clamp(2.15rem,9vw,3.4rem)}
+      .hero-highlight{max-width:480px;padding:18px 22px}
+      .services-section{padding:60px 16px}
+      .services-grid{gap:14px}
+      .service-card{min-height:0}
+    }
+    @media(max-width:480px){
+      .carousel-section{padding:86px 14px 24px}
+      .hero-description{font-size:.94rem}
+      .hero-actions{gap:9px}
+      .hero-action{flex:1;padding:0 14px;font-size:.8rem}
+      .hero-highlight strong{font-size:1.18rem}
+      .wa-float{right:16px;bottom:16px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
   </style>
 </head>
 <body>
@@ -296,6 +448,21 @@
 
   <main>
     <section class="carousel-section" id="servicios">
+      <div class="hero-intro">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">NXT COMPU · Tecnología al siguiente nivel</div>
+          <h1 class="hero-title">¿Qué necesitas para tu equipo o negocio <span>hoy?</span></h1>
+          <p class="hero-description">Todo lo que necesitas en un solo lugar. Calidad, confianza y los mejores precios.</p>
+          <div class="hero-actions">
+            <a class="hero-action hero-action-primary" href="catalogo_laptops_accesorios.html">Ver catálogo</a>
+            <a class="hero-action hero-action-secondary" href="camaras.html">Soluciones CCTV</a>
+          </div>
+        </div>
+        <div class="hero-highlight">
+          <strong>Soluciones tecnológicas para tu negocio</strong>
+          <span>Servicio técnico, seguridad y equipos con atención personalizada en Jipijapa y todo Ecuador.</span>
+        </div>
+      </div>
       <div class="carousel-wrapper reveal">
         <div class="hero-cards">
           <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Anterior">&#8249;</button>
@@ -494,7 +661,7 @@
               ctx.beginPath();
               ctx.moveTo(p.x,py);
               ctx.lineTo(q.x,qy);
-              ctx.strokeStyle='rgba(14,165,233,'+alpha+')';
+              ctx.strokeStyle='rgba(115,227,245,'+alpha+')';
               ctx.lineWidth=0.9;
               ctx.stroke();
             }
@@ -508,7 +675,7 @@
             ctx.beginPath();
             ctx.moveTo(p.x,py);
             ctx.lineTo(mouseX,mouseY);
-            ctx.strokeStyle='rgba(14,165,233,'+mAlpha+')';
+            ctx.strokeStyle='rgba(255,255,255,'+mAlpha+')';
             ctx.lineWidth=1.1;
             ctx.stroke();
           }
@@ -523,8 +690,8 @@
 
           // Glow
           var grd=ctx.createRadialGradient(p.x,py,0,p.x,py,p.r*5.5);
-          grd.addColorStop(0,'rgba(14,165,233,'+(p.opacity*pulseFactor*0.7)+')');
-          grd.addColorStop(1,'rgba(14,165,233,0)');
+          grd.addColorStop(0,'rgba(0,210,245,'+(p.opacity*pulseFactor*0.7)+')');
+          grd.addColorStop(1,'rgba(0,210,245,0)');
           ctx.beginPath();
           ctx.arc(p.x,py,p.r*5.5,0,Math.PI*2);
           ctx.fillStyle=grd;
@@ -533,7 +700,7 @@
           // Core dot
           ctx.beginPath();
           ctx.arc(p.x,py,p.r*pulseFactor,0,Math.PI*2);
-          ctx.fillStyle='rgba(14,165,233,'+(p.opacity*pulseFactor+0.2)+')';
+          ctx.fillStyle='rgba(235,250,255,'+(p.opacity*pulseFactor+0.2)+')';
           ctx.fill();
 
           // Move
