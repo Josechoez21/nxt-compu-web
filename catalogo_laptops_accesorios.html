@@ -331,11 +331,22 @@
     body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#f4f6f9;color:var(--text);line-height:1.6}
     .top-bar{background:#0a192f;color:rgba(255,255,255,.82);font-size:.68rem;letter-spacing:.1em}
     .site-header{
-      position:sticky;top:0;min-height:76px;height:76px;padding:0 max(32px,calc((100vw - 1280px)/2));
+      position:sticky;top:0;min-height:84px;height:84px;padding:0 max(32px,calc((100vw - 1280px)/2));
       background:rgba(13,39,77,.98);border:0;box-shadow:0 4px 18px rgba(4,20,43,.16)
     }
-    .site-header>a:first-child{display:flex;align-items:center;flex-shrink:0}
-    .site-header>a:first-child img{height:58px;max-height:58px!important;width:auto;filter:brightness(0) invert(1)}
+    .site-header>a:first-child{
+      display:flex;align-items:center;gap:12px;flex-shrink:0;color:#fff;
+      font-family:'Inter',sans-serif;font-size:1.95rem;font-weight:900;letter-spacing:1px;
+      line-height:1;white-space:nowrap;text-decoration:none;
+      filter:drop-shadow(0 2px 8px rgba(0,168,204,.45));
+      transform-origin:left center;transition:transform .25s ease
+    }
+    .site-header>a:first-child:hover{transform:scale(1.04)}
+    .site-header>a:first-child img{display:block;width:auto;height:46px;object-fit:contain;flex:0 0 auto;filter:brightness(0) invert(1)}
+    .brand-wordmark-accent{
+      color:#00d2ff;background:linear-gradient(115deg,#00d2ff,#3a7bd5);
+      background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent
+    }
     .header-right{gap:10px}
     .nav-links{gap:2px}
     .nav-links a{
@@ -400,8 +411,9 @@
       .catalog-wrapper{margin:28px auto;padding:0 16px}
     }
     @media(max-width:768px){
-      .site-header{height:64px;min-height:64px;padding:0 16px;flex-direction:row;gap:8px}
-      .site-header>a:first-child img{height:48px;max-height:48px!important}
+      .site-header{height:72px;min-height:72px;padding:0 16px;flex-direction:row;gap:8px}
+      .site-header>a:first-child{font-size:1.45rem;letter-spacing:.5px;gap:8px}
+      .site-header>a:first-child img{height:36px}
       .nav-links{display:none}
       .header-right{justify-content:flex-end;gap:8px}
       .btn-volver,.btn-header-cta{padding:9px 11px;font-size:.72rem}
@@ -411,7 +423,8 @@
     @media(max-width:420px){
       .top-bar{font-size:.58rem;letter-spacing:.04em}
       .site-header{padding:0 12px}
-      .site-header>a:first-child img{height:42px;max-height:42px!important}
+      .site-header>a:first-child{font-size:1.15rem}
+      .site-header>a:first-child img{height:32px}
       .btn-volver,.btn-header-cta{padding:8px;font-size:.66rem}
       .catalog-header{align-items:flex-start;gap:8px}
       .catalog-header h1{font-size:1.05rem}
@@ -425,7 +438,7 @@
 
   <header class="site-header">
     <a href="index.html" aria-label="NXT COMPU - Inicio">
-      <img src="img/logo.png" alt="NXT COMPU Logo" style="max-height: 80px; width: auto;" />
+      <img src="img/nxt-isotipo.png" alt="" aria-hidden="true" /><span class="brand-wordmark-accent">NXT</span><span>COMPU</span>
     </a>
     <div class="header-right">
       <nav aria-label="Navegacion">
